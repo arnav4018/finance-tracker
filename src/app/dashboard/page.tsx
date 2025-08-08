@@ -8,7 +8,7 @@ export default function Dashboard() {
 
   const handleGetInsights = async () => {
     try {
-      const res = await fetch('http://localhost:3001/api/insights', {
+      const res = await fetch('https://finance-tracker-backend-odkw.onrender.com/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ income: 500, expenses: 300 }),
