@@ -2,6 +2,8 @@ import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import bcrypt from 'bcrypt';
 import { findUserByEmail } from '@/lib/users';
+import type { JWT } from 'next-auth/jwt';
+import type { Session } from 'next-auth';
 
 const authOptions = {
   providers: [
@@ -59,15 +61,15 @@ const authOptions = {
     strategy: 'jwt' as const,
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user }: { token: JWT; user?: any }) {
       if (user) {
         token.id = user.id;
       }
       return token;
     },
-    async session({ session, token }) {
-      if (token) {
-        session.user.id = token.id as string;
+    async session({ session, token }: { session: Session; token: JWT }) {
+      if (token && session.user) {
+        (session.user as any).id = token.id as string;
       }
       return session;
     },
