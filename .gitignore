@@ -44,4 +44,7 @@ next-env.d.ts
 /src/generated/prisma
 .env
 
+# temporary user storage
+temp-users.json
+
 .vercel

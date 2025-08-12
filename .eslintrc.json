@@ -1,31 +1,3 @@
 {
-  "env": {
-    "browser": true,
-    "node": true
-  },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
-  ],
-  "parser": "@typescript-eslint/parser",
-  "plugins": ["@typescript-eslint", "react"],
-  "rules": {
-    "@typescript-eslint/no-require-imports": "off",
-    "@typescript-eslint/no-unused-vars": "warn",
-    "@typescript-eslint/no-unused-expressions": "off",
-    "@typescript-eslint/no-this-alias": "off",
-    "react/prop-types": "off"
-  },
-  "ignorePatterns": [
-    ".next/**",
-    "dist/**",
-    "src/generated/**",
-    "node_modules/**",
-    "build/**",
-    "*.js",
-    "*.mjs",
-    "*.cjs"
-  ]
+  "extends": ["next/core-web-vitals"]
 }
