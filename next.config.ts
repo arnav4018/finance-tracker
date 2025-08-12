@@ -30,18 +30,13 @@ const nextConfig: NextConfig = {
 
   // Environment-specific settings
   eslint: {
-    ignoreDuringBuilds: process.env.NODE_ENV === 'development',
+    ignoreDuringBuilds: false, // Enable linting during builds
   },
 
   // Image optimization
   images: {
     domains: [],
     formats: ['image/webp', 'image/avif'],
-  },
-
-  // Experimental features for better performance
-  experimental: {
-    optimizeCss: true,
   },
 };
 
