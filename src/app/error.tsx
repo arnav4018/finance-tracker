@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect } from 'react';
+import Link from 'next/link';
 import { logger } from '@/lib/logger';
 
 export default function Error({
@@ -44,12 +45,12 @@ export default function Error({
             Try Again
           </button>
           
-          <a
+          <Link
             href="/"
             className="block w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-lg transition-colors duration-200"
           >
             Go Home
-          </a>
+          </Link>
         </div>
         
         {process.env.NODE_ENV === 'development' && (

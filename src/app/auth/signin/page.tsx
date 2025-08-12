@@ -1,6 +1,7 @@
 'use client';
 import { signIn } from 'next-auth/react';
 import { useState } from 'react';
+import Link from 'next/link';
 
 export default function SignIn() {
   const [email, setEmail] = useState('');
@@ -141,9 +142,9 @@ export default function SignIn() {
               {isRegistering ? 'Already have an account? Sign in' : "Don't have an account? Register"}
             </button>
             <div>
-              <a href="/" className="text-sm text-gray-600 hover:text-gray-500">
+              <Link href="/" className="text-sm text-gray-600 hover:text-gray-500">
                 ← Back to home
-              </a>
+              </Link>
             </div>
           </div>
         </form>

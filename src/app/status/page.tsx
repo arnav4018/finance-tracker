@@ -134,18 +134,18 @@ export default function StatusPage() {
                 )}
 
                 <div className="flex space-x-4">
-                  <a
+                  <Link
                     href="/"
                     className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                   >
                     Home
-                  </a>
-                  <a
+                  </Link>
+                  <Link
                     href="/auth/signin"
                     className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                   >
                     Test Sign In
-                  </a>
+                  </Link>
                   <button
                     onClick={() => window.location.reload()}
                     className="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
